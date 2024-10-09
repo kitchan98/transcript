@@ -3,7 +3,7 @@ import os
 
 def get_transcript(video_id):
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id, proxies={"https": "http://localhost:8080"})
+        transcript = YouTubeTranscriptApi.get_transcript(video_id)
         return "\n".join([entry['text'] for entry in transcript])
     except Exception as e:
         return f"An error occurred: {str(e)}"
