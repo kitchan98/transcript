@@ -1,8 +1,8 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 
 proxies = {
-    "http": "http://youtube-proxy-kitkit98proxyserver.border0.io:13750",
-    "https": "http://youtube-proxy-kitkit98proxyserver.border0.io:13750"
+    "http": "http://youtube-proxy-kitkit98proxyserver.border0.io:16740",
+    "https": "http://youtube-proxy-kitkit98proxyserver.border0.io:16740"
 }
 
 def get_transcript(video_id):
