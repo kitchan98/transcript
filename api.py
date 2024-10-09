@@ -1,8 +1,12 @@
 from youtube_transcript_api import YouTubeTranscriptApi
+import os
 
 def get_transcript(video_id):
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        proxies = {
+            "https": os.environ.get("HTTPS_PROXY")
+        }
+        transcript = YouTubeTranscriptApi.get_transcript(video_id, proxies=proxies)
         return "\n".join([entry['text'] for entry in transcript])
     except Exception as e:
         return f"An error occurred: {str(e)}"
